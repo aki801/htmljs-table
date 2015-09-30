@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <title>HTML+JS Table</title>
     <!-- No se han agregado estilos, pero podría ser una buena idea -->
     <script>
@@ -23,6 +24,7 @@
                 "Enrique García",
                 "Alejandra Medina"
         ];
+
     </script>
 </head>
 <body>
@@ -33,10 +35,24 @@
         <table>
             <!-- Posiblemente se tenga que colocar código HTML a mano que no
                  es necesario que sea colocado por javascript -->
+
+
             <script>
                 /* Remplazar la siguiente línea y colocar el código que genere
                    cada renglón de la tabla */
-                document.write(nombres);
+
+              document.write('<tr>');
+                document.write('<td><strong>N°</strong></td>');
+                document.write('<td><strong>Nombre</strong></td>');
+              document.write('</tr>');
+              for(i=0; i<=14; i+=1) {
+                document.write('<tr>');
+                  document.write('<td>'+i+'</td>');
+                  document.write('<td>'+nombres[i]+'</td>');
+                document.write('</tr>');
+
+              }
+
             </script>
         </table>
 
